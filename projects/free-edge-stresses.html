@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    name="description"
+    content="A report-based analytical study of approximate free-edge interlaminar stresses in composite laminates and a qualitative evaluation of AI-generated solutions."
+  >
+  <title>Free-Edge Interlaminar Stress Analysis | Felix Li</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="project.css">
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [["\\(", "\\)"]], displayMath: [["\\[", "\\]"]] }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="../index.html">FL<span>.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="../index.html#work">All projects</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="wrap project-page free-edge-page">
+    <a class="back-link" href="../index.html#projects">← BACK TO PROJECTS</a>
+    <div class="eyebrow">ANALYTICAL MECHANICS · AI EVALUATION</div>
+    <h1 class="project-title characterization-title">Free-Edge Interlaminar Stress Analysis</h1>
+    <p class="characterization-subtitle">Composite Mechanics | Three-Dimensional Equilibrium | Approximate Stress Modeling</p>
+    <p class="project-lede">Interlaminar stresses near the free edges of composite laminates arise from three-dimensional equilibrium and are not captured by conventional plane-stress Classical Laminate Theory. This project investigated whether structured, domain-specific AI guidance could improve the reproduction and application of established free-edge stress formulations based on the work of R. Byron Pipes and N. J. Pagano [2]. Two complementary AI skills were developed and evaluated: one emphasizing physical mechanics and another emphasizing analytical equations and numerical procedures.</p>
+
+    <ul class="methods-row" aria-label="Methods">
+      <li>Free-body diagrams</li>
+      <li>Force and moment balance</li>
+      <li>Classical Laminate Theory</li>
+      <li>AI solution evaluation</li>
+    </ul>
+
+    <dl class="project-facts">
+      <div><dt>STUDY</dt><dd>AAE590AI Individual Project</dd></div>
+      <div><dt>ANALYSIS SCOPE</dt><dd>Symmetric eight-ply laminates under uniform axial loading</dd></div>
+      <div><dt>REFERENCE CASES</dt><dd>Four laminate configurations</dd></div>
+      <div><dt>MODEL STATUS</dt><dd>Approximate analytical model; not experimental or 3D FEA validated</dd></div>
+    </dl>
+
+    <section class="case-section">
+      <span class="case-index">01 — OVERVIEW</span>
+      <div>
+        <h2>Overview</h2>
+        <p>Plane-stress Classical Laminate Theory (CLT) provides in-plane laminate response but does not resolve the local interlaminar stress field at a free edge. The established analytical formulations studied here are based on the work of R. Byron Pipes and N. J. Pagano [2]; their governing mechanics are distinct from this project’s AI evaluation.</p>
+        <p>My contributions were to study and reconstruct the analytical reasoning in the reference material, identify the physical force and moment balances governing interlaminar shear and normal stresses, and develop two complementary AI guidance skills. V1 emphasized physical reasoning, free-body diagrams, and stress mechanisms; V2 emphasized mathematical derivations, equations, and numerical procedures. I tested V1, V2, and their combined use against reference calculations for four symmetric eight-ply laminates.</p>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <span class="case-index">02 — ENGINEERING PROBLEM</span>
+      <div>
+        <h2>What plane-stress CLT leaves unresolved</h2>
+        <p>At a free edge, adjacent plies with different orientations can have incompatible in-plane deformation. The resulting three-dimensional redistribution includes interlaminar shear and peeling stresses, which are absent from the plane-stress CLT solution [2]. A practical estimate therefore needs additional assumptions about how those stresses vary across the laminate thickness and boundary layer.</p>
+        <figure class="method-figure method-figure-technical">
+          <img
+            src="../assets/free-edge/peeling-stress-mechanism.png"
+            alt="Report illustration of the free-edge peeling stress mechanism in a laminated composite."
+            loading="lazy"
+          >
+          <figcaption>Free-edge peeling-stress mechanism illustrated in the project report. [4]</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <span class="case-index">03 — METHODOLOGY</span>
+      <div>
+        <h2>Equilibrium and assumed boundary-layer distributions</h2>
+        <p>The analysis considers symmetric laminates, so the bending-extension coupling matrix is zero, under uniform axial loading. It uses a wide-plate approximation, a boundary-layer width equal to the total laminate thickness, and assumed through-thickness stress distributions to close the force and moment balances.</p>
+        <p>I reconstructed the established force and moment balances using free-body reasoning to relate changes in in-plane ply stresses to interlaminar tractions [2]. The shear and peeling distributions are simplified approximations: their shapes and amplitudes follow the selected assumptions and equilibrium constraints, rather than a solution of the full three-dimensional elasticity problem.</p>
+        <div class="technical-gallery">
+          <figure class="technical-figure">
+            <img src="../assets/free-edge/boundary-layer-stress-distributions.png" alt="Report diagram showing assumed interlaminar shear and peeling stress distributions through a laminate boundary layer." loading="lazy">
+            <figcaption>Assumed boundary-layer shear and peeling stress distributions from the report.</figcaption>
+          </figure>
+          <figure class="technical-figure">
+            <img src="../assets/free-edge/triangular-peeling-stress-balance.png" alt="Report free-body diagram representing a triangular peeling stress distribution and its moment balance." loading="lazy">
+            <figcaption>Triangular peeling-stress distribution used to illustrate the balance approach.</figcaption>
+          </figure>
+        </div>
+        <h3>Approximate stress relationships</h3>
+        <p>The approximate shear relationship is expressed in terms of ply-level stresses from CLT [2]:</p>
+        <div class="equation-display">
+          \[
+          \tau_{xz,k} \approx \frac{2}{m}\sum_{j=1}^{k}\tau_{xy,j}
+          \]
+        </div>
+        <p>The established normal-stress formulation gives the maximum interlaminar normal stress in terms of the bending moments generated by the ply forces [2]:</p>
+        <div class="equation-display">
+          \[
+          \begin{aligned}
+          \sigma_{z,\max} &= \frac{6\sum M_y}{m^2 h_0^2},\\
+          M_{y,k} &= \sum_{j=1}^{k} F_j\left(k-j+\frac{1}{2}\right)h_0.
+          \end{aligned}
+          \]
+        </div>
+        <p>Here, <em>m</em> is the number of plies, <em>h</em><sub>0</sub> is the ply thickness, and <em>F</em><sub>j</sub> is the in-plane force per unit width in ply <em>j</em>. The moment sum is evaluated for the <em>k</em>-ply section. These are established approximate model equations, not equations newly developed in this project, and they should not be interpreted as exact local free-edge stresses.</p>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <span class="case-index">04 — AI EVALUATION</span>
+      <div>
+        <h2>Comparing structured guidance</h2>
+        <p>I evaluated a baseline response, mechanics-focused guidance (V1), equation-focused guidance (V2), and combined V1+V2 guidance against the report’s reference calculations. The two skills were developed for this project: V1 emphasized physical reasoning, free-body diagrams, and stress mechanisms; V2 emphasized mathematical derivations, equations, and numerical procedures.</p>
+        <p>V1 partially captured the mechanism but missed the factor of two in the shear relation, used an unsupported normal-stress shape and incorrect moment arms, and produced mostly incorrect numerical results. V2 gave the correct equation forms but had mixed numerical performance; its peeling-stress result was approximately doubled for cases C and D. The combined condition performed best in the report’s implementation comparison.</p>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <span class="case-index">05 — ERROR ANALYSIS</span>
+      <div>
+        <h2>Where derivations and implementations diverged</h2>
+        <p>Comparing generated results with the reference calculations exposed incorrect assumptions, missing numerical factors, stress-amplitude errors, and implementation mistakes. The contrast between equation forms and numerical outputs shows why checking equilibrium alone is not enough; geometry, sign convention, and implementation details must remain consistent with the established mechanics.</p>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <span class="case-index">06 — LIMITATIONS</span>
+      <div>
+        <h2>Limitations and lessons learned</h2>
+        <p>The model relies on assumed stress shapes, a boundary-layer width equal to the laminate thickness, and a wide-plate approximation. It does not resolve the exact local or potentially singular free-edge stress field. Its results are analytical approximations based on the report’s CLT reference stresses, not independently validated by experiments or three-dimensional finite-element analysis.</p>
+        <p>This small, problem-specific evaluation is not an independent validation of the stress model. Further validation would require an appropriate independent three-dimensional analysis or experimental study.</p>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <span class="case-index">07 — SKILL COMPARISON</span>
+      <div>
+        <h2>Qualitative Comparison of AI Skill Configurations</h2>
+        <div class="results-table-wrap free-edge-comparison-wrap" tabindex="0" aria-label="Scrollable comparison of AI skill configurations">
+          <table class="results-table free-edge-comparison-table">
+            <caption>Qualitative Comparison of AI Skill Configurations</caption>
+            <thead>
+              <tr><th scope="col">Criterion</th><th scope="col">V1 only</th><th scope="col">V2 only</th><th scope="col">V1 + V2</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">3D equilibrium</th><td>Correct</td><td>Correct</td><td>Correct</td></tr>
+              <tr><th scope="row">Shear stress mechanism</th><td>Partially correct</td><td>Correct</td><td>Correct</td></tr>
+              <tr><th scope="row">Shear stress amplitude</th><td>Incorrect</td><td>Correct</td><td>Correct</td></tr>
+              <tr><th scope="row">Normal stress mechanism</th><td>Partially correct</td><td>Correct</td><td>Correct</td></tr>
+              <tr><th scope="row">Normal stress amplitude</th><td>Incorrect</td><td>Correct equation</td><td>Correct equation</td></tr>
+              <tr><th scope="row">Numerical implementation</th><td>Mostly incorrect</td><td>Mixed</td><td>Best</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="free-edge-table-note">These ratings are my qualitative evaluation against the reference solutions, not independently validated performance metrics. “Best” is a relative assessment among the three tested configurations, not a claim of universally correct numerical predictions. “Correct equation” does not mean the numerical implementation was fully correct.</p>
+        <p>Both guidance approaches captured the governing equilibrium equations, but the mechanics-focused skill alone struggled with stress amplitudes and numerical implementation. The equation-focused skill improved analytical consistency, while combining both approaches produced the strongest overall numerical performance among the tested configurations. These results suggest that explicit mathematical formulations and physical reasoning provide complementary guidance for AI-assisted engineering analysis.</p>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <span class="case-index">08 — CONCLUSION</span>
+      <div>
+        <h2>Conclusion</h2>
+        <p>This project studied and implemented established analytical free-edge stress formulations based on Pipes and Pagano [2], rather than developing a new analytical theory. Its contribution was to investigate how AI-generated engineering solutions reproduce and apply that mechanics, and how physical reasoning and explicit mathematical guidance complement one another.</p>
+        <p>The comparison highlights the distinction between writing the correct equations and implementing them correctly in numerical procedures. AI-generated engineering results should be checked against established reference calculations, including assumptions, coefficients, stress amplitudes, and implementation details. These findings are limited to a small, problem-specific evaluation and do not establish universal performance or correctness.</p>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <span class="case-index">09 — REFERENCES</span>
+      <div>
+        <h2>References</h2>
+        <ol class="free-edge-references">
+          <li>R. Byron Pipes. Micromechanics prediction of composite properties from constituent properties. Lecture Notes, AAE 555: Mechanics of Composite Materials, 2026.</li>
+          <li>R. B. Pipes and N. J. Pagano. Interlaminar stresses in composite laminates under uniform axial extension. <em>Journal of Composite Materials</em>, 4(4):538–548, 1970. doi: 10.1177/002199837000400409. URL https://doi.org.</li>
+          <li>S. Tian. Creating a skill for an ai agent: Introduction, September 2025. URL https://cdmhub.org. Accessed November 8, 2026.</li>
+          <li>Fachgebiet Leichtbau und Strukturmechanik (LSM). Interlaminare spannungen, 2026. URL https://www.maschinenbau.tu-darmstadt.de/lsm/forschung_lsm/schwerpunkt_lsm/interlaminare_spannungen/interlaminare_spannungen.de.jsp. Accessed: 2026-11-07.</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer wrap"><span>© 2026 Felix Li</span><a href="../index.html#top">Back to home ↑</a></footer>
+</body>
+</html>
