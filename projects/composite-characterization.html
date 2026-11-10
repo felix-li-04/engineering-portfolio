@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    name="description"
+    content="Composite materials characterization through microscopy, mechanical testing, digital image correlation, laminate analysis, and open-hole failure prediction."
+  >
+  <title>Composite Materials Characterization and Failure Analysis | Felix Li</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="../index.html">FL<span>.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="../index.html#work">All projects</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="wrap project-page characterization-page">
+    <a class="back-link" href="../index.html#work">← BACK TO PROJECTS</a>
+    <div class="eyebrow">MSE 586 · COMPOSITE CHARACTERIZATION</div>
+    <h1 class="project-title characterization-title">Composite Materials Characterization and Failure Analysis</h1>
+    <p class="characterization-subtitle">Experimental Mechanics | Digital Image Correlation | Classical Laminate Theory | Failure Prediction</p>
+    <p class="project-lede">Across 14 experiments over 14 weeks in Purdue University’s MSE 586 composite characterization laboratory, I worked with a broad experimental program connecting composite manufacturing, mechanical characterization, laminate mechanics, and failure analysis. The work included prepreg processing and specimen preparation, mechanical testing, digital image correlation (DIC), optical microscopy, stress transformations, Classical Laminate Theory (CLT), and failure criteria. Responsibilities were shared across the course experiments; the work below highlights methods and findings from the program.</p>
+
+    <dl class="project-facts">
+      <div><dt>PROGRAM</dt><dd>Purdue University · MSE 586</dd></div>
+      <div><dt>SCOPE</dt><dd>14 experiments · 14 weeks</dd></div>
+      <div><dt>MATERIAL SYSTEM</dt><dd>IM7/8552 carbon-fiber/epoxy</dd></div>
+      <div><dt>METHODS</dt><dd>Testing · DIC · Microscopy · CLT · Failure analysis</dd></div>
+    </dl>
+
+    <section class="case-section">
+      <span class="case-index">01 — MICROSTRUCTURE</span>
+      <div>
+        <h2>How do processing and microstructure connect?</h2>
+        <p>Optical microscopy and image segmentation were used to characterize the fiber and matrix regions of the composite. The microscopy-based fiber volume fraction was approximately 58%, providing a measured link between material architecture and the mechanical response observed in later experiments.</p>
+        <p>Prepreg layup and vacuum bagging were part of the manufacturing work. Together, processing quality and microstructure influence the reinforcement fraction, void content, and directional properties that characterize a laminate.</p>
+        <div class="technical-gallery">
+          <figure class="technical-figure">
+            <button class="figure-zoom" type="button" data-image="../assets/mse586/microscopy.png" data-alt="Segmented optical micrograph showing circular fiber cross-sections against the matrix background." data-caption="Segmented optical micrograph used for fiber-area characterization; image segmentation distinguishes fiber and matrix regions.">
+              <img src="../assets/mse586/microscopy.png" alt="Segmented optical micrograph showing circular fiber cross-sections against the matrix background." loading="lazy">
+              <span class="zoom-hint">Open full-size figure ↗</span>
+            </button>
+            <figcaption>Segmented optical micrograph used for fiber-area characterization.</figcaption>
+          </figure>
+          <figure class="technical-figure">
+            <button class="figure-zoom" type="button" data-image="../assets/mse586/layup.png" data-alt="Prepreg material being arranged by hand on a flat layup surface." data-caption="Prepreg layup work in the MSE 586 laboratory.">
+              <img src="../assets/mse586/layup.png" alt="Prepreg material being arranged by hand on a flat layup surface." loading="lazy">
+              <span class="zoom-hint">Open full-size figure ↗</span>
+            </button>
+            <figcaption>Prepreg layup work as part of the specimen-manufacturing process.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <span class="case-index">02 — OFF-AXIS RESPONSE</span>
+      <div>
+        <h2>How does loading direction affect tensile response?</h2>
+        <p>IM7/8552 off-axis specimens were tested in tension at 15°, 30°, 45°, 60°, and 75°. DIC provided full-field strain measurements that could be considered alongside applied stress, stress/strain tensor transformations, and Tsai–Wu failure predictions.</p>
+        <p>Experimental ultimate tensile strength decreased from approximately 346 MPa at 15° to 69 MPa at 75°. The measured apparent shear modulus G<sub>12</sub> ranged from approximately 5.04 to 3.60 GPa across the tested orientations.</p>
+        <p>Apparent shear-modulus estimates can vary with nonuniform strain fields, boundary constraints, and measurement assumptions used to reduce the data. Extension–shear coupling and local strain variation mean the extracted value is not independent of specimen orientation and test interpretation.</p>
+        <div class="technical-gallery">
+          <figure class="technical-figure">
+            <button class="figure-zoom" type="button" data-image="../assets/mse586/offaxis.png" data-alt="Off-axis tensile coupon specimens grouped by orientation from 15 to 75 degrees." data-caption="Off-axis tensile coupon specimens grouped by nominal fiber orientations of 15°, 30°, 45°, 60°, and 75°.">
+              <img src="../assets/mse586/offaxis.png" alt="Off-axis tensile coupon specimens grouped by orientation from 15 to 75 degrees." loading="lazy">
+              <span class="zoom-hint">Open full-size figure ↗</span>
+            </button>
+            <figcaption>Off-axis coupon specimens grouped by nominal fiber orientation.</figcaption>
+          </figure>
+          <figure class="technical-figure technical-figure-wide">
+            <button class="figure-zoom" type="button" data-image="../assets/mse586/offaxisgraph.png" data-alt="Three plots of Poisson's ratio, apparent modulus, and maximum stress versus off-axis angle." data-caption="Experimental trends in Poisson’s ratio, apparent modulus, and maximum stress versus orientation. The plots show declining maximum stress with increasing angle.">
+              <img src="../assets/mse586/offaxisgraph.png" alt="Three plots of Poisson's ratio, apparent modulus, and maximum stress versus off-axis angle." loading="lazy">
+              <span class="zoom-hint">Open full-size figure ↗</span>
+            </button>
+            <figcaption>Measured Poisson’s ratio, apparent modulus, and maximum stress as functions of off-axis angle.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <span class="case-index">03 — LAMINATE ARCHITECTURE</span>
+      <div>
+        <h2>How does stacking sequence shape response?</h2>
+        <p>Double-Double and cross-ply laminates were compared through their stacking sequences, directional stiffness, Poisson’s ratio, and failure morphology. The cross-ply laminates exhibited an axial modulus of approximately 75 GPa; the two tested Double-Double configurations exhibited approximately 40.4 and 55.6 GPa.</p>
+        <p>These values describe the particular layups tested, not all Double-Double laminates. CLT predictions provided a mechanics-based comparison, while Tsai–Wu first-ply failure predictions were considered against experimentally observed ultimate failure—a distinction between predicted onset and specimen-level failure.</p>
+        <figure class="technical-figure">
+          <button class="figure-zoom" type="button" data-image="../assets/mse586/doubledoubleandcrossply.png" data-alt="Comparison panel showing failed tensile specimens from two Double-Double layups and two cross-ply layups." data-caption="Failure morphology for the tested Double-Double and cross-ply configurations. Specimen images illustrate these specific layups and are not representative of every laminate in each family.">
+            <img src="../assets/mse586/doubledoubleandcrossply.png" alt="Comparison panel showing failed tensile specimens from two Double-Double layups and two cross-ply layups." loading="lazy">
+            <span class="zoom-hint">Open full-size figure ↗</span>
+          </button>
+          <figcaption>Failure morphology across the tested Double-Double and cross-ply layups.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <span class="case-index">04 — OPEN-HOLE TENSION</span>
+      <div>
+        <h2>How do architecture and hole size affect notched strength?</h2>
+        <p>Open-hole tensile testing followed ASTM D5766 methods across three laminate architectures, three nominal hole diameters, and 45 tensile coupons. DIC was used to measure strain fields around the notches and to support examination of failure morphology and notch sensitivity.</p>
+        <p>Measured notched strength retention decreased as nominal hole diameter increased in the plotted comparisons. The failure photographs show different damage patterns across laminate architectures, including differences in the extent and appearance of fracture around the hole; these observations are specific to the tested specimens.</p>
+        <div class="open-hole-gallery">
+          <figure class="technical-figure">
+            <button class="figure-zoom" type="button" data-image="../assets/mse586/090090openhole.png" data-alt="Failed open-hole tensile coupons across three hole-size groups for the [0/90/0/90]s laminate architecture." data-caption="Open-hole tensile failure specimens for the [0/90/0/90]s laminate group, organized by nominal hole size.">
+              <img src="../assets/mse586/090090openhole.png" alt="Failed open-hole tensile coupons across three hole-size groups for the [0/90/0/90]s laminate architecture." loading="lazy">
+              <span class="zoom-hint">Open full-size figure ↗</span>
+            </button>
+            <figcaption>[0/90/0/90]<sub>s</sub> laminate specimens, grouped by hole size.</figcaption>
+          </figure>
+          <figure class="technical-figure">
+            <button class="figure-zoom" type="button" data-image="../assets/mse586/009090openhole.png" data-alt="Failed open-hole tensile coupons across three hole-size groups for the [0/0/90/90]s laminate architecture." data-caption="Open-hole tensile failure specimens for the [0/0/90/90]s laminate group, organized by nominal hole size.">
+              <img src="../assets/mse586/009090openhole.png" alt="Failed open-hole tensile coupons across three hole-size groups for the [0/0/90/90]s laminate architecture." loading="lazy">
+              <span class="zoom-hint">Open full-size figure ↗</span>
+            </button>
+            <figcaption>[0/0/90/90]<sub>s</sub> laminate specimens, grouped by hole size.</figcaption>
+          </figure>
+          <figure class="technical-figure">
+            <button class="figure-zoom" type="button" data-image="../assets/mse586/2070openhole.png" data-alt="Failed open-hole tensile coupons across three hole-size groups for the [20/-20/70/-70]s laminate architecture." data-caption="Open-hole tensile failure specimens for the [20/−20/70/−70]s laminate group, organized by nominal hole size.">
+              <img src="../assets/mse586/2070openhole.png" alt="Failed open-hole tensile coupons across three hole-size groups for the [20/-20/70/-70]s laminate architecture." loading="lazy">
+              <span class="zoom-hint">Open full-size figure ↗</span>
+            </button>
+            <figcaption>[20/−20/70/−70]<sub>s</sub> laminate specimens, grouped by hole size.</figcaption>
+          </figure>
+        </div>
+        <figure class="technical-figure">
+          <button class="figure-zoom" type="button" data-image="../assets/mse586/openholestrengthretention.png" data-alt="Chart of finite-width-corrected open-hole strength retention versus nominal hole diameter for laminate architectures A, B, and C." data-caption="Finite-width-corrected open-hole strength-retention ratios versus nominal hole diameter for the three laminate groups.">
+            <img src="../assets/mse586/openholestrengthretention.png" alt="Chart of finite-width-corrected open-hole strength retention versus nominal hole diameter for laminate architectures A, B, and C." loading="lazy">
+            <span class="zoom-hint">Open full-size figure ↗</span>
+          </button>
+          <figcaption>Finite-width-corrected strength retention decreases with increasing nominal hole diameter in the measured comparisons.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <span class="case-index">05 — MODEL VALIDATION</span>
+      <div>
+        <h2>Which analytical criterion best matches each architecture?</h2>
+        <p>Point Stress Criterion (PSC), Average Stress Criterion (ASC), and Modified Point Stress Criterion (MPSC) predictions were compared with experimental strength-retention ratios. The lowest reported root-mean-square error (RMSE) varied by laminate: ASC for Laminate A (0.0462), MPSC for Laminate B (0.0286), and PSC for Laminate C (0.0722).</p>
+        <p>This variation shows that model performance depends on laminate architecture. Greater model complexity does not automatically improve predictive accuracy: a more complex criterion can fit one layup better while another criterion performs best for a different one.</p>
+        <div class="technical-gallery">
+          <figure class="technical-figure technical-figure-wide">
+            <button class="figure-zoom" type="button" data-image="../assets/mse586/pscascopenhole.png" data-alt="Open-hole strength retention data and model curves for Point Stress and Average Stress Criteria across three laminate layups." data-caption="Experimental strength-retention data compared with PSC and ASC predictions for the three laminate layups.">
+              <img src="../assets/mse586/pscascopenhole.png" alt="Open-hole strength retention data and model curves for Point Stress and Average Stress Criteria across three laminate layups." loading="lazy">
+              <span class="zoom-hint">Open full-size figure ↗</span>
+            </button>
+            <figcaption>PSC and ASC prediction curves compared with open-hole experimental data.</figcaption>
+          </figure>
+          <figure class="technical-figure">
+            <button class="figure-zoom" type="button" data-image="../assets/mse586/pscascerror.png" data-alt="Bar chart comparing calibration RMSE for PSC, ASC, and MPSC for laminate layups A, B, and C." data-caption="Calibration RMSE comparison for PSC, ASC, and MPSC by laminate architecture. The lowest criterion differs across layups.">
+              <img src="../assets/mse586/pscascerror.png" alt="Bar chart comparing calibration RMSE for PSC, ASC, and MPSC for laminate layups A, B, and C." loading="lazy">
+              <span class="zoom-hint">Open full-size figure ↗</span>
+            </button>
+            <figcaption>Model calibration RMSE by laminate architecture; best-fit criterion differs among A, B, and C.</figcaption>
+          </figure>
+        </div>
+        <div class="results-table-wrap">
+          <table class="results-table">
+            <caption>Lowest reported RMSE by tested laminate architecture</caption>
+            <thead>
+              <tr><th scope="col">Laminate</th><th scope="col">Lowest-RMSE criterion</th><th scope="col">RMSE</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">A</th><td>ASC</td><td>0.0462</td></tr>
+              <tr><th scope="row">B</th><td>MPSC</td><td>0.0286</td></tr>
+              <tr><th scope="row">C</th><td>PSC</td><td>0.0722</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <span class="case-index">06 — CAPABILITIES</span>
+      <div>
+        <h2>Technical capabilities</h2>
+        <ul class="capability-grid">
+          <li>ASTM-based mechanical testing</li>
+          <li>MTS load frames</li>
+          <li>Digital Image Correlation</li>
+          <li>Optical microscopy</li>
+          <li>Image segmentation</li>
+          <li>Prepreg manufacturing</li>
+          <li>Stress–strain data reduction</li>
+          <li>Stress and strain tensor transformations</li>
+          <li>Classical Laminate Theory</li>
+          <li>Tsai–Wu failure analysis</li>
+          <li>Experimental/analytical model comparison</li>
+        </ul>
+      </div>
+    </section>
+
+    <a class="related-project-card" href="compression-after-impact.html">
+      <span class="eyebrow">RELATED INVESTIGATION · IM7/8552</span>
+      <span class="related-project-title">Compression After Impact — Damage Tolerance and Residual Strength <span aria-hidden="true">↗</span></span>
+      <span class="related-project-description">An investigation of impact-induced damage and residual compressive strength in quasi-isotropic IM7/8552 laminates, including drop-weight impact testing, laser metrology, compression testing, and analytical strength comparisons.</span>
+    </a>
+
+    <div class="next-project">
+      <a href="../index.html#work">PORTFOLIO <span>Back to all projects ↑</span></a>
+    </div>
+  </main>
+
+  <dialog class="figure-dialog" aria-label="Enlarged technical figure">
+    <form method="dialog"><button class="figure-dialog-close" aria-label="Close enlarged figure">Close ×</button></form>
+    <img src="" alt="">
+    <p></p>
+  </dialog>
+
+  <footer class="site-footer wrap">
+    <span>© 2026 Felix Li</span>
+    <a href="../index.html">Home ↑</a>
+  </footer>
+
+  <script>
+    const figureDialog = document.querySelector(".figure-dialog");
+    const dialogImage = figureDialog.querySelector("img");
+    const dialogCaption = figureDialog.querySelector("p");
+
+    document.querySelectorAll(".figure-zoom").forEach((button) => {
+      button.addEventListener("click", () => {
+        dialogImage.src = button.dataset.image;
+        dialogImage.alt = button.dataset.alt;
+        dialogCaption.textContent = button.dataset.caption;
+        figureDialog.showModal();
+      });
+    });
+
+    figureDialog.addEventListener("click", (event) => {
+      if (event.target === figureDialog) {
+        figureDialog.close();
+      }
+    });
+  </script>
+</body>
+</html>

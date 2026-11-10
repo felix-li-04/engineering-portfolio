@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    name="description"
+    content="Technical case study on iterative CNC machining, workholding, datum control, and dimensional validation for CERN CMS ITST polymer tracks."
+  >
+  <title>Precision CNC Machining of ITST Polymer Tracks | Felix Li</title>
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="../index.html">FL<span>.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="../index.html#work">All projects</a>
+      <a href="../index.html#about">About</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="wrap project-page machining-page">
+    <a class="back-link" href="cms-support-tube.html">← BACK TO THE CERN CMS PROJECT</a>
+    <div class="eyebrow">TECHNICAL METHODOLOGY · CNC PROCESS DEVELOPMENT</div>
+    <h1 class="project-title machining-title">Precision CNC Machining of ITST Polymer Tracks</h1>
+    <p class="machining-subtitle">Iterative Process Development, Workholding, Datum Control, and Dimensional Validation</p>
+    <p class="project-lede">I was responsible for developing machining procedures for complex, double-sided acetal track components used in the CERN CMS Inner Tracker Support Tube assembly. Each part required multiple machining operations, deliberate workholding, and dimensional inspection. Starting from CAD geometry and manufacturing requirements, I refined the process through machining trials and measured results.</p>
+
+    <!-- Confirm public-release permission for project imagery before publishing. -->
+    <figure class="method-figure">
+      <img
+        src="../assets/cms/TrackMachining.png"
+        alt="Long dark track profiles arranged on a fixture plate with clamps and green locating pieces."
+      >
+      <figcaption>Track geometry fixtured onto CNC machine during the machining process.</figcaption>
+    </figure>
+
+    <section class="case-section">
+      <span class="case-index">01 — MATERIAL &amp; STRATEGY</span>
+      <div>
+        <h2>Material and manufacturing strategy</h2>
+        <p>Acetal copolymer was selected after considering machinability, dimensional control, bonding considerations, and material cost relative to UHMW and glass-filled alternatives. Because the component geometry required machining both sides of long stock sections, fixturing and datum transfer were central process considerations.</p>
+        <p>My initial approach used a CNC router with multiple machining setups. Locating holes and pins supported repositioning between operations, while the outer profile was retained until later in the sequence to preserve workholding options. This established a practical starting process while keeping the long stock supported during machining.</p>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <span class="case-index">02 — INITIAL TRIALS</span>
+      <div>
+        <h2>Initial dimensional errors</h2>
+        <p>Early machining trials showed thickness deviations of approximately 0.25–0.4 mm in measured regions, along with hole and groove dimensional errors. These measurements pointed to a process problem broader than toolpath geometry alone.</p>
+        <p>I suspected that clamping naturally bowed stock was deforming the workpiece and changing the effective machining surface. In other words, the shape of the material while constrained could differ from its released geometry. To investigate, I introduced dial-indicator measurements during stock preparation and clamping adjustment so I could monitor displacement while tightening the fixtures.</p>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <span class="case-index">03 — WORKHOLDING</span>
+      <div>
+        <h2>Fixturing and workpiece deformation</h2>
+        <p>I revised the workholding procedure to account for the stock’s natural curvature, limit additional clamping-induced deformation, and establish a more consistent reference surface. Rather than treating the measured errors as a cutter-compensation problem, I considered how restraint and part shape influenced the material presented to the tool.</p>
+        <p>One subsequent machining iteration achieved overall flatness within the 0.25 mm target. Local geometric deviations remained, so this result supported the revised surfacing approach but did not establish that all part dimensions met specification.</p>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <span class="case-index">04 — CAM &amp; FINISH</span>
+      <div>
+        <h2>CAM strategy and surface finish</h2>
+        <p>The curved geometry required selection and sequencing of adaptive clearing, 3D contouring, parallel finishing, and ball-end milling operations. I investigated how roughing stepover, residual stock, and finishing passes affected the resulting surface. Changes to roughing and finishing produced visibly improved curved-surface quality in later trials.</p>
+        <p>Some residual deviations initially suggested insufficient material removal or tool wear. Subsequent tests made datum mismatch—particularly after flipping the part—a more plausible contributor to certain errors. This was an evolving diagnosis, not a single conclusively proven root cause. The changing evidence reinforced the need to examine toolpath, workpiece restraint, and references together.</p>
+        <figure class="method-figure">
+          <img
+            src="../assets/cms/TrackFinal.jpg"
+            alt="Machined track components resting on a carbon-fiber composite surface."
+            loading="lazy"
+          >
+          <figcaption>A track component in the ITST half cylinder.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <span class="case-index">05 — DATUMS</span>
+      <div>
+        <h2>Datum control and alignment</h2>
+        <p>Two-sided machining made it difficult to preserve geometric references after flipping and refixturing. I tested revised Z-zero approaches, including referencing the spoilboard surface, and used locating holes to improve alignment between setups. Later trials showed improved part alignment and more consistent machining depths.</p>
+        <p>I also observed limitations in relying on MDF as a reference surface over extended machining periods. An HDPE spoilboard was identified as a potential improvement, rather than a change with already verified performance. Reference stability remained part of the process-development work.</p>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <span class="case-index">06 — FIXTURE CONCEPT</span>
+      <div>
+        <h2>Repeatable fixture design</h2>
+        <p>Based on the preceding trials, I developed a fixture concept with axial locating pins and central fastening to address stock bowing and support consistent repositioning. The design was intended to accommodate multiple track variants while maintaining a consistent machining datum.</p>
+        <p>This was a process-development concept; it should not be interpreted as a fully production-qualified fixture. A scan visualization from the broader dimensional-analysis work is included for technical context only, not as evidence of a machining tolerance or a controlled before-and-after result.</p>
+        <figure class="method-figure method-figure-technical">
+          <img
+            src="../assets/cms/TrackMetrology.jpg"
+            alt="Color-coded scan deviation visualization across a long structural component."
+            loading="lazy"
+          >
+          <figcaption>A scan deviation visualization from dimensional-analysis work. It is not a quantified plot of these machining trials.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <span class="case-index">07 — RESULTS</span>
+      <div>
+        <h2>Results and engineering lessons</h2>
+        <p>The observations below came from different machining iterations and inspection contexts. They are not a controlled before-and-after comparison of identical measurements.</p>
+        <div class="results-table-wrap">
+          <table class="results-table">
+            <caption>Documented process-development observations</caption>
+            <thead>
+              <tr>
+                <th scope="col">Observation</th>
+                <th scope="col">Engineering interpretation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Initial thickness errors</th>
+                <td>Approximately 0.25–0.4 mm in measured regions.</td>
+              </tr>
+              <tr>
+                <th scope="row">Improved machining trial</th>
+                <td>Overall flatness was within the 0.25 mm target; other local deviations remained.</td>
+              </tr>
+              <tr>
+                <th scope="row">Later machining trials</th>
+                <td>Improved alignment and curved-surface finish; no verified universal tolerance figure.</td>
+              </tr>
+              <tr>
+                <th scope="row">Revised process</th>
+                <td>Locating-hole alignment and improved Z-zero consistency were incorporated.</td>
+              </tr>
+              <tr>
+                <th scope="row">Further improvement identified</th>
+                <td>A more stable spoilboard and dedicated fixturing were identified as potential improvements.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <span class="case-index">CONCLUSION</span>
+      <div>
+        <h2>Process, not just toolpath</h2>
+        <p>The key engineering lesson was that machining accuracy depended on the complete manufacturing system: stock geometry, fixturing, machine behavior, CAM strategy, reference datums, and inspection. The process improved through repeated measurement, hypothesis testing, and corrective action—not toolpath changes alone. The most useful next steps are continued datum and fixture control, paired dimensional checks across operations, and a more stable reference surface.</p>
+      </div>
+    </section>
+
+    <div class="next-project">
+      <a href="cms-support-tube.html">MAIN PROJECT <span>CERN CMS Inner Tracker Support Tube ↗</span></a>
+    </div>
+  </main>
+
+  <footer class="site-footer wrap">
+    <span>© 2026 Felix Li</span>
+    <a href="../index.html">Home ↑</a>
+  </footer>
+</body>
+</html>

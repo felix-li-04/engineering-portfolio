@@ -1,0 +1,19 @@
+# Unpublished source report
+/assets/surrogatemodelling/Evaluation_of_laminate_parameterizations_as_reduced_order_state_representations_for_thermoelastic_failure_prediction_in_composite_laminates.pdf
+
+# Unused internal or draft assets
+/assets/cms/IntegrationPlanning.png
+/assets/cms/Picture2.png
+/assets/cms/TrackAndFoamCore.jpg
+/assets/testingandchar/crossheaddisplacementgraph.png
+/assets/testingandchar/impactforcegraph.png
+/projects/composite-mechanics.html
+/projects/template.html
+
+# Local and temporary files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.log
+.vscode/
